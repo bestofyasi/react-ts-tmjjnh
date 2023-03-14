@@ -1,0 +1,70 @@
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  z-index: 20;
+  display: block;
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.212);
+  backdrop-filter: blur(10px);
+
+  z-index: 1;
+
+  .overlay-content {
+    background: rgba(0, 0, 0, 0.288);
+    position: relative;
+    ::-webkit-scrollbar {
+      display: none; /* for Chrome, Safari, and Opera */
+    }
+
+    .nav-mobile {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      ul {
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        // text-align: center;
+        align-items: center;
+        justify-items: center;
+        color: red;
+
+        a {
+          text-decoration: none;
+          color: rgb(255, 0, 0);
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 40px;
+          letter-spacing: -1.2px;
+          text-align: center;
+          display: block;
+          margin-bottom: 10px;
+          padding: 20px;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &::after {
+            transition: all 5s ease-Out;
+          }
+        }
+      }
+    }
+  }
+}
+
+.no-menu {
+  display: none;
+}
